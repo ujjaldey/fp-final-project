@@ -21,13 +21,13 @@ import cats.implicits._
 class DebtByPayer private (val debtByPerson: Map[Person, DebtByPayee]) {
 
   /**
-    * TODO #18: Get the debt summary by payee for this payer
+    * TODONE #18: Get the debt summary by payee for this payer
     */
   def debtForPayer(person: Person): Option[DebtByPayee] =
     debtByPerson.get(person)
 
   /**
-    * TODO #19: Get all the payers in a list
+    * TODONE #19: Get all the payers in a list
     */
   def allPayers(): List[Person] = debtByPerson.keySet.toList
 
@@ -98,7 +98,7 @@ object DebtByPayer {
     Eq.instance((d1, d2) => d1.debtByPerson === d2.debtByPerson)
 
   /**
-    * TODO #20: Implement a monoid instance.
+    * TODONE #20: Implement a monoid instance.
     *
     * Hint: Use the monoidMap instance and a suitable method to convert it
     * to the instance you need.
